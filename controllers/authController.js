@@ -30,8 +30,9 @@ exports.login = async (req, res) => {
   try {
     const user = await User.findOne({ email });
     if (!user) {
-      return res.status(400).json({ msg: 'Invalid credentials' });
-    }
+  return res.status(400).json({ msg: 'Invalid credentials' });
+}
+
 
     const isPasswordMatch = await comparePassword(password, user.password);
     if (!isPasswordMatch) {
