@@ -1,7 +1,7 @@
 ?
 import axios from 'axios';
 
-const API_URL = 'https://backend-fz3n.onrender.com/auth'; // Adjust base URL as needed
+const API_URL = '/auth'; // Adjust base URL as needed
 
 const login = async (data) => {
   const response = await axios.post(`${API_URL}/login`, data);
