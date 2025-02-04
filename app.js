@@ -23,7 +23,7 @@ app.use(express.json());
 app.use('/auth', authRoutes);
 app.use('/api/models', authMiddleware, modelRoutes);
 app.use('/api/payments', authMiddleware, paymentRoutes);
-app.use('/api/users', authMiddleware, roleMiddleware('admin'), userRoutes);
+app.use('/api/users', authMiddleware, roleMiddleware('admin'), userRoutes)
 app.use('/api/upload', uploadRoutes);
 
 module.exports = app;
