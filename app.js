@@ -20,7 +20,7 @@ app.use(cors()); // Enable CORS
 app.use(express.json());
 
 // Routes
-app.use('https://backend-fz3n.onrender.com/auth', authRoutes);
+app.use('/auth', authRoutes);
 app.use('/api/models', authMiddleware, modelRoutes);
 app.use('/api/payments', authMiddleware, paymentRoutes);
 app.use('/api/users', authMiddleware, roleMiddleware('admin'), userRoutes);
